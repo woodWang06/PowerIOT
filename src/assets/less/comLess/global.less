@@ -1,0 +1,83 @@
+.drawer_warrp {
+  width: 90%;
+  margin: auto;
+}
+
+// 修改时的输入框margin
+.no_margin {
+  margin-bottom: 10px !important;
+}
+
+.between_box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+/*滚动条样式*/
+.warrp::-webkit-scrollbar {
+  /*滚动条整体样式*/
+  width: 4px;
+  /*高宽分别对应横竖滚动条的尺寸*/
+  height: 4px;
+}
+
+.warrp::-webkit-scrollbar-thumb {
+  /*滚动条里面小方块*/
+  border-radius: 8px;
+  -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.warrp::-webkit-scrollbar-track {
+  /*滚动条里面轨道*/
+  -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+  border-radius: 0;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+// .scrollCenter {
+//   margin: 100px auto;
+//   width: 200px;
+//   height: 300px;
+//   overflow: auto;
+// }
+
+.scrollCenter::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+/*正常情况下滑块的样式*/
+.scrollCenter::-webkit-scrollbar-thumb {
+  background-color: #447cdd;
+  border-radius: 10px;
+  -webkit-box-shadow: inset1px1px0rgba(0, 0, 0, 0.1);
+}
+
+/*鼠标悬浮在该类指向的控件上时滑块的样式*/
+.scrollCenter:hover::-webkit-scrollbar-thumb {
+  background-color: #447cdd;
+  border-radius: 10px;
+  -webkit-box-shadow: inset1px1px0rgba(0, 0, 0, 0.1);
+}
+
+/*鼠标悬浮在滑块上时滑块的样式*/
+.scrollCenter::-webkit-scrollbar-thumb:hover {
+  background-color: #447cdd;
+  -webkit-box-shadow: inset1px1px0rgba(0, 0, 0, 0.1);
+}
+
+/*正常时候的主干部分*/
+.scrollCenter::-webkit-scrollbar-track {
+  border-radius: 10px;
+  -webkit-box-shadow: inset006pxrgba(0, 0, 0, 0);
+  background-color: #0f2158;
+}
+
+/*鼠标悬浮在滚动条上的主干部分*/
+.scrollCenter::-webkit-scrollbar-track:hover {
+  -webkit-box-shadow: inset006pxrgba(0, 0, 0, 0.4);
+  background-color: #0f2158;
+}

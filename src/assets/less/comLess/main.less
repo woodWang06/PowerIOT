@@ -1,0 +1,418 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body,
+#app,
+.wrapper {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  font-family: "microsoft yahei", ;
+}
+
+div {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'PingFang SC', "Helvetica Neue", Helvetica, "microsoft yahei", arial, STHeiTi, sans-serif;
+}
+
+a {
+  text-decoration: none
+}
+
+input:focus {
+  outline-color: none !important;
+}
+
+#login {
+
+  input:-webkit-autofill,
+  textarea:-webkit-autofill,
+  select:-webkit-autofill {
+    -webkit-text-fill-color: #ededed !important;
+
+    -webkit-box-shadow: 0 0 0px 1000px rgba(5, 21, 81, 1) inset !important;
+
+    background-color: rgba(5, 21, 81, 1);
+
+    background-image: none;
+
+    transition: background-color 50000s ease-in-out 0s; //背景色透明  生效时长  过渡效果  启用时延迟的时间
+
+  }
+
+  input:-webkit-autofill-selected {
+    background: none !important;
+  }
+
+  input:-webkit-autofill {
+    box-shadow: 0 0 0px 1000px rgba(5, 21, 81, 1) inset !important;
+  }
+}
+
+.content-box {
+  position: absolute;
+  left: 160px;
+  right: 0;
+  top: 0px;
+  bottom: 0;
+  -webkit-transition: left .3s ease-in-out;
+  transition: left .3s ease-in-out;
+  background: #f0f0f0;
+  padding: 20px 20px 0 20px;
+  overflow-y: auto;
+  box-sizing: border-box;
+}
+
+.content {
+  width: 100%;
+  height: 90%;
+  padding: 10px 0 0 0px;
+  // padding: 5px;
+
+}
+
+.contentCenter {
+  width: 100%;
+  height: 90%;
+  // padding: 10px 0 0 0px;
+  // padding: 5px;
+
+}
+
+// .scrollWarrp {
+//   margin: 100px auto;
+//   width: 200px;
+//   height: 300px;
+//   overflow: auto;
+// }
+
+.scrollWarrp::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+/*正常情况下滑块的样式*/
+.scrollWarrp::-webkit-scrollbar-thumb {
+  background-color: #ddd;
+  border-radius: 10px;
+  -webkit-box-shadow: inset1px1px0rgba(0, 0, 0, 0.1);
+}
+
+/*鼠标悬浮在该类指向的控件上时滑块的样式*/
+.scrollWarrp:hover::-webkit-scrollbar-thumb {
+  background-color: #ddd;
+  border-radius: 10px;
+  -webkit-box-shadow: inset1px1px0rgba(0, 0, 0, 0.1);
+}
+
+/*鼠标悬浮在滑块上时滑块的样式*/
+.scrollWarrp::-webkit-scrollbar-thumb:hover {
+  background-color: #ddd;
+  -webkit-box-shadow: inset1px1px0rgba(0, 0, 0, 0.1);
+}
+
+/*正常时候的主干部分*/
+.scrollWarrp::-webkit-scrollbar-track {
+  border-radius: 10px;
+  -webkit-box-shadow: inset006pxrgba(0, 0, 0, 0);
+  // background-color: #ddd;
+}
+
+/*鼠标悬浮在滚动条上的主干部分*/
+.scrollWarrp::-webkit-scrollbar-track:hover {
+  -webkit-box-shadow: inset006pxrgba(0, 0, 0, 0.4);
+  // background-color: #ddd;
+}
+
+.content-collapse {
+  left: 65px;
+}
+
+.container {
+  padding: 10px 0px;
+  background: #fff;
+  // border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.crumbs {
+  margin: 10px 0;
+}
+
+.el-table th {
+  background-color: #fff !important;
+  padding: 10px 0 !important;
+  font-size: 1.4rem;
+}
+
+.el-table td {
+  padding: 16px 0 !important;
+  font-size: 1.4rem !important;
+
+}
+
+.el-table .cell {
+  text-align: left !important;
+}
+
+.el-table__empty-text {
+  font-size: 1.2rem;
+}
+
+.el-tabs__header {
+  margin-bottom: 0px !important;
+}
+
+.pagination {
+  margin: 20px 0;
+  text-align: center;
+}
+
+.plugins-tips {
+  padding: 20px 10px;
+  margin-bottom: 20px;
+}
+
+.el-button+.el-tooltip {
+  margin-left: 10px;
+}
+
+.el-table tr:hover {
+  background: #f6faff;
+}
+
+
+.el-form-item__error {
+  line-height: 0.5 !important;
+
+}
+
+.el-drawer {
+  overflow-y: auto !important;
+}
+
+.mgb20 {
+  margin-bottom: 20px;
+}
+
+.move-enter-active,
+.move-leave-active {
+  transition: opacity .5s;
+}
+
+.move-enter,
+.move-leave {
+  opacity: 0;
+}
+
+.cell {
+  text-align: center;
+}
+
+.el-table__body-wrapper {
+  overflow-y: scroll;
+}
+
+.is-scrolling-none {
+  overflow-y: scroll;
+}
+
+
+
+.el-dialog__body {
+  padding: 10px 20px !important;
+
+  .box-card {
+    .clearfix {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+/*滚动条样式*/
+.el-drawer::-webkit-scrollbar {
+  /*滚动条整体样式*/
+  width: 4px;
+  /*高宽分别对应横竖滚动条的尺寸*/
+  height: 4px;
+}
+
+.el-drawer::-webkit-scrollbar-thumb {
+  /*滚动条里面小方块*/
+  border-radius: 8px;
+  -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.el-drawer::-webkit-scrollbar-track {
+  /*滚动条里面轨道*/
+  -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+  border-radius: 0;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+div {
+  box-sizing: border-box;
+}
+
+#commomDate .el-date-editor.el-input,
+#commomDate .el-date-editor.el-input__inner {
+  width: 150px !important;
+}
+
+#commomDate .el-input__inner {
+  background: rgba(255, 255, 255, 0.2) !important;
+  color: #fff !important;
+  border: 1px solid #7387A3 !important;
+}
+
+.el-menu-item.is-active {
+  // background-image: url('../../../assets/center/img_xzzt.png') !important;
+  background: #1f6de7 !important;
+  // margin: 0 20px
+  border-radius: 10px;
+
+}
+
+// .el-form-item {
+//   margin-bottom: 10px !important;
+// }
+
+//dawer弹窗
+.dialog-footer {
+  text-align: right;
+}
+
+.demo-drawer__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  // position: absolute;
+  width: 70%;
+  margin-top: 50px;
+
+  .button {
+    flex: 0.5;
+    margin: 30px;
+  }
+}
+
+.el-select {
+  width: 200px !important;
+}
+
+// .el-input {
+//   width: 200px !important;
+// }
+
+.el-pagination .el-input {
+  width: 100px !important;
+}
+
+.demo-drawer__footer .el-form-item {
+  margin-bottom: 20px !important;
+}
+
+.demo-drawer__content {
+  padding-left: 10px;
+}
+
+.el-cascader-menu__wrap {
+  height: 204px !important;
+}
+
+.el-table__empty-text {
+  line-height: 400px !important;
+  background: url('../../../assets/center/tableBg.png') no-repeat;
+  background-position: 50% 34%;
+  color: #C0C4CC !important;
+}
+
+// .el-dialog__header {
+//   padding: 10px 20px !important;
+//   border-bottom: 1px solid #DCDFE6
+// }
+
+.el-dialog__headerbtn {
+  top: 13px !important;
+}
+
+.el-dialog__title {
+  font-size: 1.4rem !important;
+}
+
+.el-dialog {
+  border-radius: 8px !important;
+}
+
+.el-pagination {
+  text-align: center;
+  ;
+}
+
+#delsits .el-dialog {
+  z-index: 1000000 !important;
+}
+
+
+
+///////////////////////////////////////homecenterset
+
+.scrollWarrphome::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+/*正常情况下滑块的样式*/
+.scrollWarrphome::-webkit-scrollbar-thumb {
+  background-color: #fff;
+  border-radius: 10px;
+  -webkit-box-shadow: inset1px1px0rgba(0, 0, 0, 0.1);
+}
+
+/*鼠标悬浮在该类指向的控件上时滑块的样式*/
+.scrollWarrphome:hover::-webkit-scrollbar-thumb {
+  background-color: #fff;
+  border-radius: 10px;
+  -webkit-box-shadow: inset1px1px0rgba(0, 0, 0, 0.1);
+}
+
+/*鼠标悬浮在滑块上时滑块的样式*/
+.scrollWarrphome::-webkit-scrollbar-thumb:hover {
+  background-color: #fff;
+  -webkit-box-shadow: inset1px1px0rgba(0, 0, 0, 0.1);
+}
+
+/*正常时候的主干部分*/
+.scrollWarrphome::-webkit-scrollbar-track {
+  border-radius: 10px;
+  -webkit-box-shadow: inset006pxrgba(0, 0, 0, 0);
+  background-color: #DDE1E7;
+}
+
+/*鼠标悬浮在滚动条上的主干部分*/
+.scrollWarrphome::-webkit-scrollbar-track:hover {
+  -webkit-box-shadow: inset006pxrgba(0, 0, 0, 0.4);
+  background-color: #DDE1E7;
+}
+
+.contents {
+  height: 100%;
+}
